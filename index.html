@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHADOW JOKER Core v3.5</title>
+    <title>SHADOW JOKER CALL HISTORY</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
@@ -17,24 +17,29 @@
             background-size: cover; background-position: center;
         }
 
-        /* Dashboard Background after Login (Requested GIF Embedded) */
+        /* Dashboard Background after Login (Your Requested Matrix Glitch Loop GIF) */
         .cyber-bg {
-            background: linear-gradient(rgba(1, 4, 9, 0.88), rgba(1, 4, 9, 0.94)), 
-                        url('https://media.giphy.com/media/lmWXhvGYPSQPl0Y8Wa/giphy.gif');
+            background: linear-gradient(rgba(1, 4, 9, 0.85), rgba(1, 4, 9, 0.92)), 
+                        url('https://media.giphy.com/media/3og0ILLVvPp8d64Jd6/giphy.gif');
             background-size: cover; background-position: center; background-attachment: fixed;
         }
         
         .glow-green { text-shadow: 0 0 12px #00ff66, 0 0 25px #00ff00; }
         .glass-card {
-            background: rgba(3, 8, 18, 0.75); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
-            border: 2px solid rgba(0, 255, 102, 0.2); box-shadow: 0 8px 32px 0 rgba(0, 255, 102, 0.15);
+            background: rgba(2, 6, 16, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 2px solid rgba(0, 255, 102, 0.25); box-shadow: 0 8px 32px 0 rgba(0, 255, 102, 0.2);
         }
-        .operator-card input:checked + div { border-color: #00ff66; background: rgba(0, 255, 102, 0.12); box-shadow: 0 0 15px rgba(0, 255, 102, 0.25); }
+        
+        /* Operator Cards Image Handler */
+        .operator-card input:checked + div { 
+            border-color: #00ff66; 
+            background: rgba(0, 255, 102, 0.15); 
+            box-shadow: 0 0 20px rgba(0, 255, 102, 0.3); 
+        }
     </style>
 </head>
 <body id="mainBody" class="login-bg min-h-screen flex flex-col justify-between text-green-400 p-3 sm:p-6 transition-all duration-500">
 
-    <!-- LOGIN PANEL -->
     <div id="loginSection" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-95 p-4">
         <div class="max-w-md w-full glass-card rounded-2xl p-6 sm:p-8 text-center border-red-500/40">
             <h2 class="text-3xl font-extrabold text-red-500 mb-2 tracking-widest uppercase">⚠️ RESTRICTED AREA ⚠️</h2>
@@ -53,29 +58,29 @@
         </div>
     </div>
 
-    <!-- MAIN DASHBOARD -->
     <div id="dashboardSection" class="hidden w-full max-w-2xl mx-auto my-auto space-y-6">
         <header class="text-center">
-            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wider glow-green animate-pulse mb-1">💀 SHADOW JOKER v3.5 💀</h1>
+            <div class="flex justify-center mb-2">
+                <img src="https://images.vecteezy.com/system/resources/thumbnails/041/502/120/small_2x/golden-glitter-phone-call-icon-for-communication-png.png" alt="Tools Logo" class="w-16 h-16 drop-shadow-[0_0_10px_rgba(234,179,8,0.5)] animate-pulse">
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-wider glow-green mb-1">💀 SHADOW JOKER CALL HISTORY 💀</h1>
             <p class="text-xs text-cyan-400 tracking-widest uppercase font-bold">TELECOM CALL DATABASE EXTRACTOR</p>
             <p class="text-[10px] text-gray-500 mt-1">SYSTEM HANDLED BY: CYBER TEAM HELP</p>
         </header>
 
         <main class="w-full glass-card rounded-2xl p-5 sm:p-8">
             <div class="flex items-center justify-between border-b border-green-950 pb-3 mb-5">
-                <span class="text-xs text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-2"><i data-lucide="terminal" class="w-4 h-4 text-green-400"></i> API CONSOLE ACTIVE</span>
+                <span class="text-xs text-cyan-400 font-bold uppercase tracking-wider flex items-center gap-2"><i data-lucide="terminal" class="w-4 h-4 text-green-400"></i> API MAIN SYSTEM ACTIVE</span>
                 <span id="reqCounter" class="text-xs text-yellow-500 font-bold tracking-wider">REMAINING DAILY REQS: 5/5</span>
             </div>
 
-            <!-- LOADING SIMULATION SCREEN (DYNAMICS MULTI-GIF ROTATION) -->
             <div id="loadingScreen" class="hidden text-center py-6 space-y-4">
                 <div class="relative max-w-sm mx-auto">
-                    <!-- Dynamic Loader Screen Frame -->
                     <img id="loaderGif" src="https://media.giphy.com/media/6NjTciHDVFh11crDfY/giphy.gif" alt="Extracting Data" class="mx-auto w-full h-48 object-cover rounded-xl border-2 border-cyan-500/50 shadow-lg shadow-cyan-950/50">
                     <div class="absolute bottom-2 right-2 bg-black/80 px-2 py-0.5 text-[9px] rounded text-cyan-400 font-bold uppercase">Node Link Active</div>
                 </div>
                 
-                <div class="glow-green font-bold text-lg animate-pulse uppercase tracking-wider">⚡ FETCHING SYSTEM DATAPACKETS... ⚡</div>
+                <div class="glow-green font-bold text-lg animate-pulse uppercase tracking-wider">⚡ STAR DOWNLOAD CALL LIST... ⚡</div>
                 
                 <div class="w-full bg-gray-950 border border-green-900 rounded-full h-3 max-w-md mx-auto overflow-hidden">
                     <div id="progressBar" class="bg-gradient-to-r from-green-500 to-cyan-500 h-full w-0 transition-all duration-300"></div>
@@ -84,7 +89,6 @@
                 <div id="liveTerminalOut" class="text-[10px] text-gray-400 font-mono max-w-md mx-auto h-20 overflow-y-hidden text-left bg-black p-2 rounded-lg border border-gray-900"></div>
             </div>
 
-            <!-- CORE CONFIGURATION FORM -->
             <form id="coreForm" class="space-y-5" onsubmit="startExtraction(event)">
                 <div>
                     <label class="block text-xs uppercase tracking-wider mb-2 text-cyan-300 font-bold">📱 TARGET BANGLADESHI NUMBER :</label>
@@ -92,41 +96,46 @@
                 </div>
 
                 <div>
-                    <label class="block text-xs uppercase tracking-wider mb-2 text-cyan-300 font-bold">📡 CORE OPERATOR ARCHITECTURE :</label>
+                    <label class="block text-xs uppercase tracking-wider mb-2 text-cyan-300 font-bold">📡 SELECT OPERATOR NETWORK :</label>
                     <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                        
                         <label class="operator-card relative cursor-pointer">
                             <input type="radio" name="operator" value="Grameenphone" checked class="sr-only">
-                            <div class="border border-gray-800 rounded-xl p-3 text-center bg-black/40 hover:border-blue-500 transition">
-                                <span class="text-blue-400 text-xl font-bold block mb-1">🔷 GP</span>
-                                <span class="text-[10px] text-gray-500 block uppercase font-bold tracking-tighter">Grameenphone</span>
+                            <div class="border border-gray-800 rounded-xl p-3 flex flex-col items-center justify-center h-24 bg-black/40 hover:border-blue-500 transition">
+                                <img src="https://images.vecteezy.com/system/resources/thumbnails/068/894/425/small_2x/grameenphone-logo-horizontal-gp-sim-company-icon-transparent-background-png.png" alt="GP" class="h-8 object-contain mb-1">
+                                <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Grameenphone</span>
                             </div>
                         </label>
+                        
                         <label class="operator-card relative cursor-pointer">
                             <input type="radio" name="operator" value="Robi" class="sr-only">
-                            <div class="border border-gray-800 rounded-xl p-3 text-center bg-black/40 hover:border-red-500 transition">
-                                <span class="text-red-500 text-xl font-bold block mb-1">🟥 ROBI</span>
-                                <span class="text-[10px] text-gray-500 block uppercase font-bold tracking-tighter">Robi Axiata</span>
+                            <div class="border border-gray-800 rounded-xl p-3 flex flex-col items-center justify-center h-24 bg-black/40 hover:border-red-500 transition">
+                                <img src="https://images.vecteezy.com/system/resources/thumbnails/068/764/261/small_2x/robi-logo-robi-axiata-sim-company-english-icon-transparent-background-png.png" alt="Robi" class="h-8 object-contain mb-1">
+                                <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Robi Axiata</span>
                             </div>
                         </label>
+                        
                         <label class="operator-card relative cursor-pointer">
                             <input type="radio" name="operator" value="Airtel" class="sr-only">
-                            <div class="border border-gray-800 rounded-xl p-3 text-center bg-black/40 hover:border-rose-500 transition">
-                                <span class="text-rose-500 text-xl font-bold block mb-1">🔻 AIRTEL</span>
-                                <span class="text-[10px] text-gray-500 block uppercase font-bold tracking-tighter">Airtel BD</span>
+                            <div class="border border-gray-800 rounded-xl p-3 flex flex-col items-center justify-center h-24 bg-black/40 hover:border-rose-500 transition">
+                                <img src="https://images.vecteezy.com/system/resources/thumbnails/068/894/632/small_2x/airtel-logo-vertical-sim-company-icon-transparent-background-png.png" alt="Airtel" class="h-10 object-contain mb-1">
+                                <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Airtel BD</span>
                             </div>
                         </label>
+                        
                         <label class="operator-card relative cursor-pointer">
                             <input type="radio" name="operator" value="Banglalink" class="sr-only">
-                            <div class="border border-gray-800 rounded-xl p-3 text-center bg-black/40 hover:border-orange-500 transition">
-                                <span class="text-orange-400 text-xl font-bold block mb-1">🔸 BL</span>
-                                <span class="text-[10px] text-gray-500 block uppercase font-bold tracking-tighter">Banglalink</span>
+                            <div class="border border-gray-800 rounded-xl p-3 flex flex-col items-center justify-center h-24 bg-black/40 hover:border-orange-500 transition">
+                                <img src="https://images.vecteezy.com/system/resources/thumbnails/068/842/057/small_2x/banglalink-logo-bl-sim-company-icon-transparent-background-png.png" alt="BL" class="h-8 object-contain mb-1">
+                                <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Banglalink</span>
                             </div>
                         </label>
+                        
                         <label class="operator-card relative cursor-pointer">
                             <input type="radio" name="operator" value="Teletalk" class="sr-only">
-                            <div class="border border-gray-800 rounded-xl p-3 text-center bg-black/40 hover:border-emerald-500 transition">
-                                <span class="text-emerald-400 text-xl font-bold block mb-1">🟢 TT</span>
-                                <span class="text-[10px] text-gray-500 block uppercase font-bold tracking-tighter">Teletalk Ltd</span>
+                            <div class="border border-gray-800 rounded-xl p-3 flex flex-col items-center justify-center h-24 bg-black/40 hover:border-emerald-500 transition">
+                                <img src="https://images.vecteezy.com/system/resources/thumbnails/067/936/622/small_2x/teletalk-logo-wordmark-sim-company-icon-transparent-background-png.png" alt="Teletalk" class="h-6 object-contain mb-2 mt-1">
+                                <span class="text-[10px] text-gray-400 uppercase font-bold tracking-tighter">Teletalk Ltd</span>
                             </div>
                         </label>
                     </div>
@@ -144,7 +153,7 @@
                 </div>
 
                 <button type="submit" class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-black font-extrabold uppercase py-3.5 px-4 rounded-xl tracking-widest transition duration-300 flex items-center justify-center gap-2 text-sm shadow-lg shadow-green-900/40">
-                    <i data-lucide="shield-alert" class="w-5 h-5"></i> DECRYPT ENGINE START 📥
+                    <i data-lucide="shield-alert" class="w-5 h-5"></i> DOWNLOAD ENGINE START 📥
                 </button>
             </form>
         </main>
@@ -163,12 +172,11 @@
         t.setMonth(t.getMonth() - 3);
         document.getElementById('startDate').value = t.toISOString().split('T')[0];
 
-        // লোডিং স্ক্রিনের জন্য আপনার পাঠানো ৪টি ইউনিক GIF এর এরে
         const loadingGifs = [
-            "https://media.giphy.com/media/6NjTciHDVFh11crDfY/giphy.gif", // Intel info
-            "https://media.giphy.com/media/xsCevAab5ufj37BeGR/giphy.gif", // Network node
-            "https://media.giphy.com/media/lo4hWSPgBJLlUjGYeK/giphy.gif", // Cyber abstract
-            "https://media.giphy.com/media/1mckwb7WzC66FCP5Tp/giphy.gif"  // Hacker coding
+            "https://media.giphy.com/media/6NjTciHDVFh11crDfY/giphy.gif",
+            "https://media.giphy.com/media/xsCevAab5ufj37BeGR/giphy.gif",
+            "https://media.giphy.com/media/lo4hWSPgBJLlUjGYeK/giphy.gif",
+            "https://media.giphy.com/media/1mckwb7WzC66FCP5Tp/giphy.gif"
         ];
 
         function handleLogin() {
@@ -178,7 +186,7 @@
                 document.getElementById('loginSection').classList.add('hidden');
                 document.getElementById('dashboardSection').classList.remove('hidden');
                 
-                // লগইন সফল হলে ব্যাকগ্রাউন্ডের GIF চেঞ্জ হবে (lmWXhvGYPSQPl0Y8Wa)
+                // লগইন সফল হলে নতুন ম্যাট্রিক্স গ্লিচ জিআইএফ ব্যাকগ্রাউন্ড লোড হবে
                 const body = document.getElementById('mainBody');
                 body.classList.remove('login-bg');
                 body.classList.add('cyber-bg');
@@ -228,7 +236,7 @@
             const term = document.getElementById('liveTerminalOut');
             const gifImg = document.getElementById('loaderGif');
 
-            let totalDuration = 270; // ৪.৫ মিনিট (২৭০ সেকেন্ড)
+            let totalDuration = 270; 
             let elapsed = 0;
 
             const terminalPhrases = [
@@ -243,7 +251,6 @@
                 pBar.style.width = pct + "%";
                 pText.innerText = `PROGRESS: ${pct}% (EST. TIME REMAINING: ${Math.ceil((totalDuration - elapsed)/60)} MIN)`;
 
-                // প্রতি ৬০ সেকেন্ড (১ মিনিট) পর পর লোডিং GIF অটোমেটিক্যালি চেঞ্জ হবে যাতে ইউজার বোর না হয়
                 let currentGifIndex = Math.floor(elapsed / 67) % loadingGifs.length;
                 if (gifImg.src !== loadingGifs[currentGifIndex]) {
                     gifImg.src = loadingGifs[currentGifIndex];
