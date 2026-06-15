@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHADOW JOKER 💀 CALL LOG BYPASS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Fira Code', monospace;
+            background-color: #020617;
+            overflow-x: hidden;
+        }
+        /* Live Cyber Hacker GIF Background */
+        .cyber-bg {
+            background: linear-gradient(rgba(2, 6, 23, 0.85), rgba(2, 6, 23, 0.92)), 
+                        url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXN6ZzZtcjZid3d3NXN0Zms4bW1vM290Y2N5bmdwY3R4Y2Z6eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3knKct3fGqxhK/giphy.gif');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        /* Neon Glowing Text & Animations */
+        .glow-text {
+            text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66, 0 0 30px #00ff00;
+        }
+        .glow-error {
+            text-shadow: 0 0 10px #ef4444, 0 0 20px #ef4444;
+        }
+        /* Advanced Glassmorphic Card Styling */
+        .glass-card {
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 2px solid rgba(0, 255, 102, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(0, 255, 102, 0.15);
+        }
+        .glass-card:focus-within {
+            border-color: rgba(0, 255, 102, 0.6);
+            box-shadow: 0 8px 32px 0 rgba(0, 255, 102, 0.35);
+        }
+    </style>
+</head>
+<body class="cyber-bg min-h-screen flex flex-col justify-between text-green-400 p-3 sm:p-6">
+
+    <header class="text-center my-6">
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-wider glow-text animate-pulse mb-2">
+            💀 SHADOW JOKER 💀
+        </h1>
+        <p class="text-xs sm:text-sm text-cyan-400 tracking-widest uppercase font-bold">
+            ⚡ DATABASE CALL LOG EXTRACOR v2.5 ⚡
+        </p>
+        <p class="text-[10px] text-gray-500 mt-1">POWERED BY: CYBER TEAM HELP</p>
+    </header>
+
+    <main class="max-w-xl w-full mx-auto glass-card rounded-2xl p-6 sm:p-8 my-auto transition-all duration-300">
+        <div class="flex items-center justify-between border-b border-green-900 pb-4 mb-6">
+            <h2 class="text-base sm:text-lg font-bold uppercase tracking-wider flex items-center gap-2 text-cyan-400">
+                <i data-lucide="terminal" class="w-5 h-5 text-green-400 animate-bounce"></i> SYSTEM CONSOLE 📡
+            </h2>
+            <span class="flex h-3 w-3 relative">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-red-600"></span>
+            </span>
+        </div>
+
+        <form id="historyForm" class="space-y-5" onsubmit="requestDownload(event)">
+            
+            <div>
+                <label class="block text-xs uppercase tracking-wider mb-2 text-cyan-300 font-bold">📱 Target Phone Number :</label>
+                <div class="relative">
+                    <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-green-400">
+                        <i data-lucide="hash" class="w-5 h-5"></i>
+                    </span>
+                    <input type="tel" pattern="[0-9]*" inputmode="numeric" required maxlength="11" id="phoneNumber"
+                        class="w-full bg-black bg-opacity-60 border border-green-800 rounded-lg p-3 pl-10 text-xl text-green-300 placeholder-green-900 focus:outline-none focus:border-green-400 font-bold tracking-widest" 
+                        placeholder="01XXXXXXXXX">
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs uppercase tracking-wider mb-2 text-cyan-300 font-bold">📡 Select Operator Network :</label>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                    <label class="flex items-center gap-2 bg-black bg-opacity-40 border border-gray-800 p-2.5 rounded-lg cursor-pointer hover:border-blue-500 transition">
+                        <input type="radio" name="operator" value="Grameenphone" checked class="accent-blue-500 w-4 h-4">
+                        <span class="text-xs font-bold text-blue-400 flex items-center gap-1">🔷 GP</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-black bg-opacity-40 border border-gray-800 p-2.5 rounded-lg cursor-pointer hover:border-red-500 transition">
+                        <input type="radio" name="operator" value="Robi" class="accent-red-500 w-4 h-4">
+                        <span class="text-xs font-bold text-red-500 flex items-center gap-1">🟥 Robi</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-black bg-opacity-40 border border-gray-800 p-2.5 rounded-lg cursor-pointer hover:border-rose-500 transition">
+                        <input type="radio" name="operator" value="Airtel" class="accent-rose-500 w-4 h-4">
+                        <span class="text-xs font-bold text-rose-500 flex items-center gap-1">🔻 Airtel</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-black bg-opacity-40 border border-gray-800 p-2.5 rounded-lg cursor-pointer hover:border-orange-500 transition">
+                        <input type="radio" name="operator" value="Banglalink" class="accent-orange-500 w-4 h-4">
+                        <span class="text-xs font-bold text-orange-400 flex items-center gap-1">🔸 BL</span>
+                    </label>
+                    <label class="flex items-center gap-2 bg-black bg-opacity-40 border border-gray-800 p-2.5 rounded-lg cursor-pointer hover:border-emerald-500 transition">
+                        <input type="radio" name="operator" value="Teletalk" class="accent-emerald-500 w-4 h-4">
+                        <span class="text-xs font-bold text-emerald-400 flex items-center gap-1">🟢 TT</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-1.5 text-cyan-300 font-bold">📅 Start Date :</label>
+                    <input type="date" id="startDate" required
+                        class="w-full bg-black bg-opacity-60 border border-green-800 rounded-lg p-2.5 text-sm text-green-400 focus:outline-none focus:border-cyan-400 font-bold">
+                </div>
+                <div>
+                    <label class="block text-xs uppercase tracking-wider mb-1.5 text-cyan-300 font-bold">📅 End Date :</label>
+                    <input type="date" id="endDate" required
+                        class="w-full bg-black bg-opacity-60 border border-green-800 rounded-lg p-2.5 text-sm text-green-400 focus:outline-none focus:border-cyan-400 font-bold">
+                </div>
+            </div>
+
+            <div id="terminalLog" class="hidden bg-black bg-opacity-90 border border-red-900 p-3 rounded-lg text-[11px] text-green-400 h-28 overflow-y-auto font-mono space-y-1 shadow-inner">
+                <p class="text-yellow-400">>> [SYSTEM] Injecting exploit payload into core API...</p>
+                <p class="text-blue-400">>> [SQLi] Bypassing telecom firewall database...</p>
+                <p class="text-pink-500">>> [SHADOW JOKER] Extracting Call Records & Metadata...</p>
+                <p class="text-red-500 animate-pulse">>> [CRITICAL] Compiling final encrypted text file...</p>
+            </div>
+
+            <button type="submit" id="submitBtn" 
+                class="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-black font-extrabold uppercase py-3.5 px-4 rounded-xl tracking-widest transition duration-300 transform active:scale-95 flex items-center justify-center gap-2 text-sm shadow-lg shadow-green-900/40">
+                <i data-lucide="shield-alert" class="w-5 h-5"></i> INTITIATE EXTRANCTION 📥
+            </button>
+        </form>
+    </main>
+
+    <footer class="text-center text-[11px] text-gray-500 my-6 space-y-1">
+        <p>© 2026 <span class="text-green-400 font-bold glow-text">Cyber Team Help</span>. We Protect Bangladesh 🇧🇩</p>
+        <p class="tracking-widest">ENCRYPTION CORE: <span class="text-black bg-cyan-400 px-1.5 py-0.5 rounded font-bold">SHADOW JOKER v2.5</span></p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // ডিফল্টভাবে আজকের তারিখ এবং ৩ মাস আগের তারিখ ফিল্ডে সেট করা
+        const today = new Date();
+        const threeMonthsAgo = new Date();
+        threeMonthsAgo.setMonth(today.getMonth() - 3);
+        
+        document.getElementById('endDate').value = today.toISOString().split('T')[0];
+        document.getElementById('startDate').value = threeMonthsAgo.toISOString().split('T')[0];
+
+        async function requestDownload(event) {
+            event.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const terminalLog = document.getElementById('terminalLog');
+            
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const operator = document.querySelector('input[name="operator"]:checked').value;
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+
+            if (new Date(startDate) > new Date(endDate)) {
+                alert("❌ Error: Start Date cannot be greater than End Date!");
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `⚠️ EXTRACTING PACKETS...`;
+            terminalLog.classList.remove('hidden');
+
+            try {
+                const response = await fetch('/api/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ phoneNumber, operator, startDate, endDate })
+                });
+
+                if (!response.ok) throw new Error('API Reject Connection.');
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `ShadowJoker_CallLog_${phoneNumber}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+
+            } catch (error) {
+                alert("💥 Connection Error to Shadow Joker API Core.");
+                console.error(error);
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<i data-lucide="shield-alert" class="w-5 h-5"></i> INTITIATE EXTRANCTION 📥`;
+                terminalLog.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
